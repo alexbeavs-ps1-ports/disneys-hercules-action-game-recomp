@@ -1,0 +1,48 @@
+{
+  "format_version": 1,
+  "game": {
+    "name": "Disney's Hercules Action Game",
+    "id": "SLUS-01029",
+    "boot_exe": "SLUS_010.29"
+  },
+  "marketing": {
+    "description": "",
+    "publisher": "",
+    "year": "",
+    "region": "USA",
+    "players": 1
+  },
+  "rom_identity": {
+    "cue_name": "Disney's Hercules Action Game (USA) (Rerelease).cue",
+    "bin_name": "Disney's Hercules Action Game (USA) (Rerelease).bin",
+    "track_counts": [
+      1
+    ],
+    "require_cue": true,
+    "data_track": {
+      "size": 409266816,
+      "md5": "31d5066b122de92b8abb9dfa54c1fa59",
+      "sha1": "0ed200c47283f40719808fa11a1de00ef8f49364",
+      "crc32": "8b3dcdbf"
+    },
+    "disc_fp": "2eaa27064226c92f105ccc8a96374d35053adfa969d029a430b9e62fc93c2e4e"
+  },
+  "exe": {
+    "load_address": "0x80010000",
+    "entry_pc": "0x800135C8",
+    "text_size": "0x0001F000",
+    "stack_base": "0x801FFFF0"
+  },
+  "seeds": {
+    "count": 296,
+    "source": "boot_exe_jal"
+  },
+  "warnings": [
+    "cue has only 1 TRACK — Track-01-only dumps fail multi-track netplay/catalog gates; prefer a full Redump cue."
+  ],
+  "notes": [
+    "entry_pc/load_address/text_size/stack_base taken from PS-X EXE header.",
+    "seeds are first-pass boot-EXE JAL targets (+ entry); expect to grow as overlays / runtime paths are discovered.",
+    "required_disc_fp is psxrecomp-toc-v1 (matches runtime DiscIdentity)."
+  ]
+}

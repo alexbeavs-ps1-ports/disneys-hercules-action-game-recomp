@@ -1,0 +1,98 @@
+{
+  "format_version": 1,
+  "id": "disneys-hercules-action-game-psx",
+  "name": "Disney's Hercules Action Game",
+  "kind": "recomp",
+  "platform": "psx",
+  "source_repo": "disneys-hercules-action-game-recomp",
+  "rom_identity": {
+    "crc32": [
+      "8b3dcdbf"
+    ],
+    "md5": [
+      "31d5066b122de92b8abb9dfa54c1fa59"
+    ],
+    "sha1": [
+      "0ed200c47283f40719808fa11a1de00ef8f49364"
+    ],
+    "disc_serials": [
+      "SLUS-01029"
+    ],
+    "sizes": [
+      409266816
+    ],
+    "filenames": [
+      "Disney's Hercules Action Game (USA) (Rerelease).cue",
+      "Disney's Hercules Action Game (USA) (Rerelease).bin"
+    ],
+    "track_counts": [
+      1
+    ],
+    "disc_fps": [
+      "2eaa27064226c92f105ccc8a96374d35053adfa969d029a430b9e62fc93c2e4e"
+    ],
+    "require_cue": true
+  },
+  "rom_extensions": [
+    ".cue",
+    ".bin",
+    ".chd"
+  ],
+  "bios_identity": {
+    "required": true,
+    "name": "SCPH1001.BIN",
+    "profile": "SCPH1001",
+    "crc32": [
+      "37157331"
+    ],
+    "md5": [
+      "924e392ed05558ffdb115408c263dccf"
+    ],
+    "sha1": [
+      "10155d8d6e6e832d6ea66db9bc098321fb5e8ebf"
+    ],
+    "sha256": [
+      "71af94d1e47a68c11e8fdb9f8368040601514a42a5a399cda48c7d3bff1e99d3"
+    ],
+    "sizes": [
+      524288
+    ],
+    "filenames": [
+      "SCPH1001.BIN"
+    ]
+  },
+  "release": {
+    "github": "alexbeavs-ps1-ports/disneys-hercules-action-game-recomp",
+    "allow_prerelease": false,
+    "asset_glob": {
+      "windows-x64": "disneys-hercules-action-game-*-windows-x64.zip",
+      "linux-x64": "disneys-hercules-action-game-*-linux-x64.zip",
+      "macos-arm64": "disneys-hercules-action-game-*-macos-arm64.zip",
+      "macos-x64": "disneys-hercules-action-game-*-macos-x64.zip"
+    }
+  },
+  "launch": {
+    "windows": "disneys_hercules_action_game.exe",
+    "linux": "disneys_hercules_action_game",
+    "macos": "disneys_hercules_action_game"
+  },
+  "build": {
+    "source": {
+      "github": "alexbeavs-ps1-ports/disneys-hercules-action-game-recomp",
+      "ref": ""
+    },
+    "toolchain": {
+      "id": "cmake-clang-v1",
+      "min_version": "1.0.14"
+    },
+    "generate": {
+      "engine": "psxrecomp",
+      "config": "game.toml"
+    },
+    "cmake": {
+      "build_dir": "build",
+      "target": "psx-runtime",
+      "config": "Release"
+    }
+  }
+}
